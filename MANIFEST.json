@@ -1,0 +1,830 @@
+{
+  "bundle": "claude-skills-export",
+  "version": "1.0.0",
+  "generated": "2026-08-30",
+  "source_machine_layout": "~/.claude (Claude Code user scope)",
+  "install": {
+    "windows": "powershell -ExecutionPolicy Bypass -File install.ps1",
+    "unix": "bash install.sh",
+    "manual": "copy skills/* into ~/.claude/skills/ (user scope) or <project>/.claude/skills/ (project scope)"
+  },
+  "counts": {
+    "skills": 21,
+    "standalone_skills": 13,
+    "gstack_dependent_skills": 54,
+    "learning_projects": 4
+  },
+  "skills": [
+    {
+      "id": "cyber-security",
+      "name": "cyber-security",
+      "version": "0.1.0",
+      "description": "Application-layer security playbook combining two reference bodies: (A) the 7 vulnerabilities of \"vibe-coded\" / LLM-generated apps (SSTI, ReDoS, Long-Password DoS, client-side AWS secret leakage, NoSQL injection, clipboard pastejacking, login replay) plus the Single-Thread Guardrail, and (B) password storage fundamentals — hashing, brute force, rainbow tables, salting, peppering, and the algorithm",
+      "path": "skills/cyber-security",
+      "files": 1,
+      "requires": null,
+      "standalone": true
+    },
+    {
+      "id": "dev-protocol",
+      "name": "dev-protocol",
+      "version": "1.0.0",
+      "description": "Personal working protocol and anti-drift response rules. Verify before you assume, read the spec first, deploy in small batches, keep answers short, no em dashes, run impact analysis before editing a symbol, and verify in production before declaring success. Use at the start of any coding, integration, or deployment session, and whenever an answer is about to run long or a change is about to touch",
+      "path": "skills/dev-protocol",
+      "files": 1,
+      "requires": null,
+      "standalone": true
+    },
+    {
+      "id": "digital-marketing-pro",
+      "name": "digital-marketing-pro",
+      "version": null,
+      "description": "Full-stack digital marketing expert for affiliate and lead-gen websites across Finance (loans, mortgages, auto), Nutra/Health, and similar niches. Use this skill whenever the user wants to: build or redesign a landing page, write SEO-optimized content, run an SEO audit, set up or optimize Google Analytics / Google Ads / Meta Ads, plan or write email marketing campaigns, analyze competitor sites, b",
+      "path": "skills/digital-marketing-pro",
+      "files": 3,
+      "requires": null,
+      "standalone": true
+    },
+    {
+      "id": "email-ops-domain-knowledge",
+      "name": "email-ops-domain-knowledge",
+      "version": "1.0.0",
+      "description": "Domain knowledge for affiliate email lead-gen operations: segment naming conventions (Live / D / H / T suffixes), which lists are inbox-placement seeds and must be excluded from performance reporting, per-domain compliance footers, and the pre-send QA gates. Use whenever the user asks to pull, analyze, or report campaign stats (Pinpointe, CAMPS_GMAIL, ManyChat, SendGrid), write or QA an email crea",
+      "path": "skills/email-ops-domain-knowledge",
+      "files": 1,
+      "requires": null,
+      "standalone": true
+    },
+    {
+      "id": "fullstack-developer",
+      "name": "fullstack-developer",
+      "version": null,
+      "description": "Senior full-stack developer with deep expertise in Node.js, Python, React, REST/GraphQL APIs, webhooks, security hardening, encryption, and data leak prevention. Use this skill whenever the user wants to: build backend APIs, create React frontends, design database schemas, integrate third-party APIs, set up webhooks, implement authentication (JWT/OAuth2), encrypt sensitive data, audit code for sec",
+      "path": "skills/fullstack-developer",
+      "files": 3,
+      "requires": null,
+      "standalone": true
+    },
+    {
+      "id": "gitnexus-cli",
+      "name": "gitnexus-cli",
+      "version": null,
+      "description": "Use when the user needs to run GitNexus CLI commands like analyze/index a repo, check status, clean the index, generate a wiki, or list indexed repos. Examples: \\\"Index this repo\\\", \\\"Reanalyze the codebase\\\", \\\"Generate a wiki\\",
+      "path": "skills/gitnexus-cli",
+      "files": 1,
+      "requires": "GitNexus MCP server + CLI",
+      "standalone": false
+    },
+    {
+      "id": "gitnexus-debugging",
+      "name": "gitnexus-debugging",
+      "version": null,
+      "description": "Use when the user is debugging a bug, tracing an error, or asking why something fails. Examples: \\\"Why is X failing?\\\", \\\"Where does this error come from?\\\", \\\"Trace this bug\\",
+      "path": "skills/gitnexus-debugging",
+      "files": 1,
+      "requires": "GitNexus MCP server",
+      "standalone": false
+    },
+    {
+      "id": "gitnexus-exploring",
+      "name": "gitnexus-exploring",
+      "version": null,
+      "description": "Use when the user asks how code works, wants to understand architecture, trace execution flows, or explore unfamiliar parts of the codebase. Examples: \\\"How does X work?\\\", \\\"What calls this function?\\\", \\\"Show me the auth flow\\",
+      "path": "skills/gitnexus-exploring",
+      "files": 1,
+      "requires": "GitNexus MCP server",
+      "standalone": false
+    },
+    {
+      "id": "gitnexus-guide",
+      "name": "gitnexus-guide",
+      "version": null,
+      "description": "Use when the user asks about GitNexus itself — available tools, how to query the knowledge graph, MCP resources, graph schema, or workflow reference. Examples: \\\"What GitNexus tools are available?\\\", \\\"How do I use GitNexus?\\",
+      "path": "skills/gitnexus-guide",
+      "files": 1,
+      "requires": "GitNexus MCP server",
+      "standalone": false
+    },
+    {
+      "id": "gitnexus-impact-analysis",
+      "name": "gitnexus-impact-analysis",
+      "version": null,
+      "description": "Use when the user wants to know what will break if they change something, or needs safety analysis before editing code. Examples: \\\"Is it safe to change X?\\\", \\\"What depends on this?\\\", \\\"What will break?\\",
+      "path": "skills/gitnexus-impact-analysis",
+      "files": 1,
+      "requires": "GitNexus MCP server",
+      "standalone": false
+    },
+    {
+      "id": "gitnexus-pr-review",
+      "name": "gitnexus-pr-review",
+      "version": null,
+      "description": "Use when the user wants to review a pull request, understand what a PR changes, assess risk of merging, or check for missing test coverage. Examples: \\\"Review this PR\\\", \\\"What does PR #42 change?\\\", \\\"Is this PR safe to merge?\\",
+      "path": "skills/gitnexus-pr-review",
+      "files": 1,
+      "requires": "GitNexus MCP server",
+      "standalone": false
+    },
+    {
+      "id": "gitnexus-refactoring",
+      "name": "gitnexus-refactoring",
+      "version": null,
+      "description": "Use when the user wants to rename, extract, split, move, or restructure code safely. Examples: \\\"Rename this function\\\", \\\"Extract this into a module\\\", \\\"Refactor this class\\\", \\\"Move this to a separate file\\",
+      "path": "skills/gitnexus-refactoring",
+      "files": 1,
+      "requires": "GitNexus MCP server",
+      "standalone": false
+    },
+    {
+      "id": "ops-manager",
+      "name": "ops-manager",
+      "version": null,
+      "description": "Operations manager for affiliate lead-gen businesses running multiple domains, networks, campaigns, and teams. Use this skill whenever the user wants to: create SOPs, build weekly review templates, track what's live vs paused, prioritize tasks across multiple projects, create project plans, write team handoff docs, build checklists for launches, manage domain portfolios, plan network rotation sche",
+      "path": "skills/ops-manager",
+      "files": 1,
+      "requires": null,
+      "standalone": true
+    },
+    {
+      "id": "security-guardian",
+      "name": "security-guardian",
+      "version": null,
+      "description": "Act as a security and firewall administrator to audit, validate, and protect all code, skills, artifacts, and modules generated in this workspace. Use this skill whenever: (1) a new skill is being created or updated, (2) any code, artifact, React component, HTML file, or script is being generated, (3) API keys, environment variables, tokens, secrets, or credentials are mentioned or appear in any c",
+      "path": "skills/security-guardian",
+      "files": 3,
+      "requires": null,
+      "standalone": true
+    },
+    {
+      "id": "senior-dev-mode",
+      "name": "senior-dev-mode",
+      "version": null,
+      "description": "Production-grade coding standards and mechanical overrides for every coding task. ALWAYS trigger this skill when the user asks you to write, edit, refactor, review, fix, or debug any code — regardless of the language, framework, or size of the task. Also trigger for: \"add a feature\", \"clean up this file\", \"fix the bug\", \"help me structure this\", \"review my code\", \"update this component\", \"rename t",
+      "path": "skills/senior-dev-mode",
+      "files": 2,
+      "requires": null,
+      "standalone": true
+    },
+    {
+      "id": "superpowers-brainstorming",
+      "name": "superpowers-brainstorming",
+      "version": null,
+      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation. Use whenever the user says 'build X', 'add Y', 'create Z', or describes any new feature/component/page. Forces structured design thinking before coding.",
+      "path": "skills/superpowers-brainstorming",
+      "files": 1,
+      "requires": null,
+      "standalone": true
+    },
+    {
+      "id": "superpowers-debugging",
+      "name": "superpowers-debugging",
+      "version": null,
+      "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes. Enforces systematic root-cause investigation instead of random fix attempts. Trigger whenever you see errors, test failures, bugs, performance issues, or build failures.",
+      "path": "skills/superpowers-debugging",
+      "files": 1,
+      "requires": null,
+      "standalone": true
+    },
+    {
+      "id": "superpowers-tdd",
+      "name": "superpowers-tdd",
+      "version": null,
+      "description": "Use when implementing any feature or bugfix, before writing implementation code. Enforces RED-GREEN-REFACTOR test-driven development cycle. Trigger whenever the user asks to implement, code, fix, or build something that involves writing production code.",
+      "path": "skills/superpowers-tdd",
+      "files": 1,
+      "requires": null,
+      "standalone": true
+    },
+    {
+      "id": "superpowers-writing-plans",
+      "name": "superpowers-writing-plans",
+      "version": null,
+      "description": "Use when you have a spec or requirements for a multi-step task, before touching code. Creates detailed implementation plans with bite-sized tasks. Trigger whenever a feature needs to be broken down into steps, or when planning implementation of any non-trivial change.",
+      "path": "skills/superpowers-writing-plans",
+      "files": 1,
+      "requires": null,
+      "standalone": true
+    },
+    {
+      "id": "terra",
+      "name": "terra",
+      "version": "1.0.0",
+      "description": "Terra — CEO / Strategy Lead. Reads the situation, identifies the right agent in the Neural Command System hierarchy, defines scope, and delegates with clarity. Use at the start of any session where work needs to be assigned, planned, or routed to the correct agent. Terra does not execute — Terra orchestrates. Invoke when the user says \"what should we work on\", \"assign this\", \"who handles X\", \"plan",
+      "path": "skills/terra",
+      "files": 1,
+      "requires": "gstack runtime (~/.claude/skills/gstack). Degrades but the preamble expects gstack binaries.",
+      "standalone": false
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "name": "ui-ux-pro-max",
+      "version": "2.0.0",
+      "description": "UI/UX design intelligence for web and mobile. Includes 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types. Automatically reads project DESIGN.md to operate within established design system constraints. Use this skill whenever the user wants to: design new pages, create UI components, choose color schemes or typography, review UI code for UX/ac",
+      "path": "skills/ui-ux-pro-max",
+      "files": 1,
+      "requires": null,
+      "standalone": true
+    }
+  ],
+  "optional_gstack_skills": [
+    {
+      "id": "_gstack-command",
+      "name": "gstack",
+      "version": "1.1.0",
+      "description": "Fast headless browser for QA testing and site dogfooding. (gstack)",
+      "path": "optional/gstack-skills/_gstack-command",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "autoplan",
+      "name": "autoplan",
+      "version": "1.0.0",
+      "description": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. (gstack)",
+      "path": "optional/gstack-skills/autoplan",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "benchmark",
+      "name": "benchmark",
+      "version": "1.0.0",
+      "description": "Performance regression detection using the browse daemon. (gstack)",
+      "path": "optional/gstack-skills/benchmark",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "benchmark-models",
+      "name": "benchmark-models",
+      "version": "1.0.0",
+      "description": "Cross-model benchmark for gstack skills. (gstack)",
+      "path": "optional/gstack-skills/benchmark-models",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "browse",
+      "name": "browse",
+      "version": "1.1.0",
+      "description": "Fast headless browser for QA testing and site dogfooding. (gstack)",
+      "path": "optional/gstack-skills/browse",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "canary",
+      "name": "canary",
+      "version": "1.0.0",
+      "description": "Post-deploy canary monitoring. (gstack)",
+      "path": "optional/gstack-skills/canary",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "careful",
+      "name": "careful",
+      "version": "0.1.0",
+      "description": "Safety guardrails for destructive commands. (gstack)",
+      "path": "optional/gstack-skills/careful",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "codex",
+      "name": "codex",
+      "version": "1.0.0",
+      "description": "OpenAI Codex CLI wrapper — three modes. (gstack)",
+      "path": "optional/gstack-skills/codex",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "context-restore",
+      "name": "context-restore",
+      "version": "1.0.0",
+      "description": "Restore working context saved earlier by /context-save. (gstack)",
+      "path": "optional/gstack-skills/context-restore",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "context-save",
+      "name": "context-save",
+      "version": "1.0.0",
+      "description": "Save working context. (gstack)",
+      "path": "optional/gstack-skills/context-save",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "cso",
+      "name": "cso",
+      "version": "2.0.0",
+      "description": "Chief Security Officer mode. (gstack)",
+      "path": "optional/gstack-skills/cso",
+      "files": 4,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "design-consultation",
+      "name": "design-consultation",
+      "version": "1.0.0",
+      "description": "Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview... (gstack)",
+      "path": "optional/gstack-skills/design-consultation",
+      "files": 4,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "design-html",
+      "name": "design-html",
+      "version": "1.0.0",
+      "description": "Design finalization: generates production-quality Pretext-native HTML/CSS. (gstack)",
+      "path": "optional/gstack-skills/design-html",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "design-review",
+      "name": "design-review",
+      "version": "2.0.0",
+      "description": "Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. (gstack)",
+      "path": "optional/gstack-skills/design-review",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "design-shotgun",
+      "name": "design-shotgun",
+      "version": "1.0.0",
+      "description": "Design shotgun: generate multiple AI design variants, open a comparison board, collect structured feedback, and iterate. (gstack)",
+      "path": "optional/gstack-skills/design-shotgun",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "devex-review",
+      "name": "devex-review",
+      "version": "1.0.0",
+      "description": "Live developer experience audit. (gstack)",
+      "path": "optional/gstack-skills/devex-review",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "diagram",
+      "name": "diagram",
+      "version": "1.0.0",
+      "description": "Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open (gstack)",
+      "path": "optional/gstack-skills/diagram",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "document-generate",
+      "name": "document-generate",
+      "version": "1.0.0",
+      "description": "Generate missing documentation from scratch for a feature, module, or entire project. (gstack)",
+      "path": "optional/gstack-skills/document-generate",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "document-release",
+      "name": "document-release",
+      "version": "1.0.0",
+      "description": "Post-ship documentation update. (gstack)",
+      "path": "optional/gstack-skills/document-release",
+      "files": 4,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "freeze",
+      "name": "freeze",
+      "version": "0.1.0",
+      "description": "Restrict file edits to a specific directory for the session. (gstack)",
+      "path": "optional/gstack-skills/freeze",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "gstack-upgrade",
+      "name": "gstack-upgrade",
+      "version": "1.1.0",
+      "description": "Upgrade gstack to the latest version.",
+      "path": "optional/gstack-skills/gstack-upgrade",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "guard",
+      "name": "guard",
+      "version": "0.1.0",
+      "description": "Full safety mode: destructive command warnings + directory-scoped edits. (gstack)",
+      "path": "optional/gstack-skills/guard",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "health",
+      "name": "health",
+      "version": "1.0.0",
+      "description": "Code quality dashboard. (gstack)",
+      "path": "optional/gstack-skills/health",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "investigate",
+      "name": "investigate",
+      "version": "1.0.0",
+      "description": "Systematic debugging with root cause investigation. (gstack)",
+      "path": "optional/gstack-skills/investigate",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "ios-clean",
+      "name": "ios-clean",
+      "version": "1.0.0",
+      "description": "Remove the DebugBridge SPM package and all #if DEBUG wiring from an iOS app. (gstack)",
+      "path": "optional/gstack-skills/ios-clean",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "ios-design-review",
+      "name": "ios-design-review",
+      "version": "1.0.0",
+      "description": "Visual design audit for iOS apps on real hardware. (gstack)",
+      "path": "optional/gstack-skills/ios-design-review",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "ios-fix",
+      "name": "ios-fix",
+      "version": "1.0.0",
+      "description": "Autonomous iOS bug fixer. (gstack)",
+      "path": "optional/gstack-skills/ios-fix",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "ios-qa",
+      "name": "ios-qa",
+      "version": "1.0.0",
+      "description": "Live-device iOS QA for SwiftUI apps. (gstack)",
+      "path": "optional/gstack-skills/ios-qa",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "ios-sync",
+      "name": "ios-sync",
+      "version": "1.0.0",
+      "description": "Regenerate the iOS debug bridge against the latest upstream gstack templates. (gstack)",
+      "path": "optional/gstack-skills/ios-sync",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "land-and-deploy",
+      "name": "land-and-deploy",
+      "version": "1.0.0",
+      "description": "Land and deploy workflow. (gstack)",
+      "path": "optional/gstack-skills/land-and-deploy",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "landing-report",
+      "name": "landing-report",
+      "version": "0.1.0",
+      "description": "Read-only queue dashboard for workspace-aware ship. (gstack)",
+      "path": "optional/gstack-skills/landing-report",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "learn",
+      "name": "learn",
+      "version": "1.0.0",
+      "description": "Manage project learnings.",
+      "path": "optional/gstack-skills/learn",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "make-pdf",
+      "name": "make-pdf",
+      "version": "1.0.0",
+      "description": "Turn any markdown file into a publication-quality PDF. (gstack)",
+      "path": "optional/gstack-skills/make-pdf",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "office-hours",
+      "name": "office-hours",
+      "version": "2.0.0",
+      "description": "YC Office Hours — two modes. (gstack)",
+      "path": "optional/gstack-skills/office-hours",
+      "files": 4,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "open-gstack-browser",
+      "name": "open-gstack-browser",
+      "version": "0.2.0",
+      "description": "Launch GStack Browser — AI-controlled Chromium with the sidebar extension baked in.",
+      "path": "optional/gstack-skills/open-gstack-browser",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "pair-agent",
+      "name": "pair-agent",
+      "version": "0.1.0",
+      "description": "Pair a remote AI agent with your browser. (gstack)",
+      "path": "optional/gstack-skills/pair-agent",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "plan-ceo-review",
+      "name": "plan-ceo-review",
+      "version": "1.0.0",
+      "description": "CEO/founder-mode plan review. (gstack)",
+      "path": "optional/gstack-skills/plan-ceo-review",
+      "files": 4,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "plan-design-review",
+      "name": "plan-design-review",
+      "version": "2.0.0",
+      "description": "Designer's eye plan review — interactive, like CEO and Eng review. (gstack)",
+      "path": "optional/gstack-skills/plan-design-review",
+      "files": 4,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "plan-devex-review",
+      "name": "plan-devex-review",
+      "version": "2.0.0",
+      "description": "Interactive developer experience plan review. (gstack)",
+      "path": "optional/gstack-skills/plan-devex-review",
+      "files": 4,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "plan-eng-review",
+      "name": "plan-eng-review",
+      "version": "1.0.0",
+      "description": "Eng manager-mode plan review. (gstack)",
+      "path": "optional/gstack-skills/plan-eng-review",
+      "files": 4,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "plan-tune",
+      "name": "plan-tune",
+      "version": "1.0.0",
+      "description": "Self-tuning question sensitivity + developer psychographic for gstack (v1: observational). (gstack)",
+      "path": "optional/gstack-skills/plan-tune",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "qa",
+      "name": "qa",
+      "version": "2.0.0",
+      "description": "Systematically QA test a web application and fix bugs found. (gstack)",
+      "path": "optional/gstack-skills/qa",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "qa-only",
+      "name": "qa-only",
+      "version": "1.0.0",
+      "description": "Report-only QA testing. (gstack)",
+      "path": "optional/gstack-skills/qa-only",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "retro",
+      "name": "retro",
+      "version": "2.0.0",
+      "description": "Weekly engineering retrospective. (gstack)",
+      "path": "optional/gstack-skills/retro",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "review",
+      "name": "review",
+      "version": "1.0.0",
+      "description": "Pre-landing PR review. (gstack)",
+      "path": "optional/gstack-skills/review",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "scrape",
+      "name": "scrape",
+      "version": "1.0.0",
+      "description": "Pull data from a web page. (gstack)",
+      "path": "optional/gstack-skills/scrape",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "setup-browser-cookies",
+      "name": "setup-browser-cookies",
+      "version": "1.0.0",
+      "description": "Import cookies from your real Chromium browser into the headless browse session. (gstack)",
+      "path": "optional/gstack-skills/setup-browser-cookies",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "setup-deploy",
+      "name": "setup-deploy",
+      "version": "1.0.0",
+      "description": "Configure deployment settings for /land-and-deploy.",
+      "path": "optional/gstack-skills/setup-deploy",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "setup-gbrain",
+      "name": "setup-gbrain",
+      "version": "1.0.0",
+      "description": "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)",
+      "path": "optional/gstack-skills/setup-gbrain",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "ship",
+      "name": "ship",
+      "version": "1.0.0",
+      "description": "Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. (gstack)",
+      "path": "optional/gstack-skills/ship",
+      "files": 18,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "skillify",
+      "name": "skillify",
+      "version": "1.0.0",
+      "description": "Codify the most recent successful /scrape flow into a permanent browser-skill on disk. (gstack)",
+      "path": "optional/gstack-skills/skillify",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "spec",
+      "name": "spec",
+      "version": "0.1.0",
+      "description": "Turn vague intent into a precise, executable spec in five phases. (gstack)",
+      "path": "optional/gstack-skills/spec",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "sync-gbrain",
+      "name": "sync-gbrain",
+      "version": "1.0.0",
+      "description": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state (gstack)",
+      "path": "optional/gstack-skills/sync-gbrain",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    },
+    {
+      "id": "unfreeze",
+      "name": "unfreeze",
+      "version": "0.1.0",
+      "description": "Clear the freeze boundary set by /freeze, allowing edits to all directories again. (gstack)",
+      "path": "optional/gstack-skills/unfreeze",
+      "files": 1,
+      "requires": "gstack repo installed at ~/.claude/skills/gstack (https://github.com/garrytan/gstack)",
+      "standalone": false
+    }
+  ],
+  "learnings": {
+    "global_claude_md": "learnings/global-CLAUDE.md",
+    "encoded_as_skills": [
+      "dev-protocol",
+      "email-ops-domain-knowledge"
+    ],
+    "raw_memory": [
+      {
+        "project": "InboxKit",
+        "files": [
+          "MEMORY.md",
+          "project_bugs.md",
+          "project_lendinblue.md",
+          "project_overview.md"
+        ]
+      },
+      {
+        "project": "Lendinblue",
+        "files": [
+          "MEMORY.md",
+          "project_segment_terminology.md"
+        ]
+      },
+      {
+        "project": "RightFundUSA",
+        "files": [
+          "project-rightfundusa-email-footer.md",
+          "project-rightfundusa-qa-tooling.md"
+        ]
+      },
+      {
+        "project": "Snapfundnow",
+        "files": [
+          "MEMORY.md",
+          "reference_segment_naming.md"
+        ]
+      }
+    ]
+  },
+  "config": {
+    "settings_reference": "config/settings.reference.json",
+    "hooks": "config/hooks/",
+    "api_branch": "config/api-branch/",
+    "note": "Hook paths in settings.reference.json are absolute to the source machine. Rewrite them before use."
+  },
+  "excluded": [
+    {
+      "what": "~/.claude/skills/gstack",
+      "why": "full git checkout of https://github.com/garrytan/gstack v1.58.1.0. Reinstall from source instead of copying."
+    },
+    {
+      "what": "plugins/marketplaces/claude-plugins-official",
+      "why": "upstream Anthropic marketplace. Re-add with the marketplace command."
+    },
+    {
+      "what": ".credentials.json, session transcripts, telemetry",
+      "why": "secrets and personal session data. Never export."
+    }
+  ]
+}

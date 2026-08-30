@@ -1,0 +1,1 @@
+- [Segment terminology](project_segment_terminology.md) — Live/D/H/T naming conventions and seed provider list (Warmy, WSI, EM, IA)

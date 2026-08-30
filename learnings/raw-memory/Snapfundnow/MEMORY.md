@@ -1,0 +1,1 @@
+- [Segment naming conventions](reference_segment_naming.md) — What Live, D, H, T suffixes mean; which lists (Warmy/WSI/EM/IA) are seeds
